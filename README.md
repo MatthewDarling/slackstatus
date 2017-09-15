@@ -42,9 +42,15 @@ docs in Lumo's readme.
 
 # Usage
 
+The first argument you pass to the script will be your status
+text. Wrap it in quotes if there are any spaces.
+
+The second argument is an optional emoji. If no emoji is specified,
+Slack defaults to a text bubble.
+
 ## The easy, but noisy, way
 
-```lumo -c $(lein classpath) slackstatus.cljs "desired status" "desired_emoji"```
+```lumo -c $(lein classpath) slackstatus.cljs "desired status" desired_emoji```
 
 While this approach works, it will generate a few hundred WARNING
 messages that I haven't figured out how to suppress.
@@ -60,4 +66,4 @@ causing the WARNING messages. The minimal classpath is just
 `com.cemerick/url` plus its dependency `pathetic`. If you're run `lein
 deps` in this directory, you'll have them installed. Then to use the script:
 
-```lumo -c ~/.m2/repository/com/cemerick/url/0.1.1/url-0.1.1.jar:~/.m2/repository/pathetic/pathetic/0.5.0/pathetic-0.5.0.jar slackstatus.cljs "desired status" "desired_emoji"```
+```lumo -c ~/.m2/repository/com/cemerick/url/0.1.1/url-0.1.1.jar:~/.m2/repository/pathetic/pathetic/0.5.0/pathetic-0.5.0.jar slackstatus.cljs "desired status" desired_emoji```
