@@ -102,7 +102,7 @@
   (apply status-change-url (take 2 *command-line-args*)))
 
 (if (empty? *command-line-args*)
-  (do (println "In order to change Slack status, you must provide at least two arguments! The first argument is the status text, the second argument is the emoji.")
+  (do (println "In order to change Slack status, you must provide the status text as an argument. An optional second argument represents the emoji.")
       (lumo.core/exit 1))
   (post (.toString (url-for-args))
         status-change-handler))
