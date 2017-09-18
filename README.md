@@ -40,6 +40,21 @@ the
 [building from source](https://github.com/anmonteiro/lumo/#building)
 docs in Lumo's readme.
 
+## Getting a token to access the Slack API
+
+Interacting with Slack's API requires you to generate a token on their
+website. The easiest way seems to
+be
+[legacy tokens](https://api.slack.com/custom-integrations/legacy-tokens).
+
+Once you have a token, save it in a file called `~/.slacktoken`.
+
+### What if legacy tokens get deprecated?
+
+Slack has a bunch of documentation about the "right" way to build apps
+now, and it seems like a lot of work for a tiny script. If there's an
+easy way to do it the way they want, it would be great to migrate.
+
 # Usage
 
 The first argument you pass to the script will be your status
