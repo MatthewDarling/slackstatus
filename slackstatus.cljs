@@ -93,7 +93,7 @@
 ;;       status-change-handler)
 ;; => {:ok false, :error "too_long", :limit 100, :field "status_text"}
 
-;; (post (.toString (status-change-url "Atlantic office" "fake-emoji"))
+;; (post (.toString (status-change-url "a status" "fake-emoji"))
 ;;       status-change-handler)
 ;; => {:ok false, :error "profile_status_set_failed_not_valid_emoji"}
 
