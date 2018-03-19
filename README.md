@@ -4,15 +4,9 @@ ClojureSript on Node.
 
 # Installation
 
-## WARNING: USE `master` FOR LUMO
+## Required Lumo version
 
-The current latest version of Lumo, 1.7.0, has a bug
-where
-[command line arguments aren't accessible](https://github.com/anmonteiro/lumo/issues/247). Until
-a newer version is released, you need to use the latest code from
-`master`. It took about 20-30 minutes for me to compile everything.
-
-Here's hoping a new version is released soon!
+`slackstatus` requires Lumo 1.8.0 or later.
 
 ## Getting dependencies with Leiningen
 
@@ -21,24 +15,8 @@ Here's hoping a new version is released soon!
 
 ## Getting dependencies without Leiningen
 
-Um, I'm not sure the best way to do this. If there's an equivalent way
-to do this with Boot or your favourite tool, a PR would be totally welcome.
-
-## Building Lumo from source
-
-### On Mac
-
-`brew` supports downloading `master` and compiling it from scratch.
-
-1. (optional) `brew unlink lumo` if you already have `lumo` installed
-1. `brew install --HEAD lumo`
-
-### Otherwise
-
-Refer to
-the
-[building from source](https://github.com/anmonteiro/lumo/#building)
-docs in Lumo's readme.
+There may be a nice way to do this with the new Clojure CLI tools, or
+possibly with newer Lumo versions. PRs welcome!
 
 ## Getting a token to access the Slack API
 
