@@ -50,7 +50,9 @@
 
 (defn surround-string
   [string surrounder]
-  (-> string (should-start-with surrounder) (should-end-with surrounder)))
+  (if (clojure.string/blank? string)
+    string
+    (-> string (should-start-with surrounder) (should-end-with surrounder))))
 
 (defn status-json
   ([text] (status-json text nil))
